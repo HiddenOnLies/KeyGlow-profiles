@@ -1,0 +1,48 @@
+{
+  "format": "keyglow/1",
+  "name": "Dracula",
+  "author": "HiddenOnLies · colors from Dracula (MIT)",
+  "description": "Purple to pink, with green, cyan and yellow sparks.",
+  "tags": [
+    "theme",
+    "animated",
+    "reactive"
+  ],
+  "layers": [
+    {
+      "effect": "gradient",
+      "params": {
+        "colors": [
+          "#bd93f9",
+          "#ff79c6"
+        ],
+        "angle": 0
+      }
+    },
+    {
+      "effect": "starlight",
+      "params": {
+        "colors": [
+          "#50fa7b",
+          "#8be9fd",
+          "#f1fa8c"
+        ],
+        "background": "#000000",
+        "density": 0.08,
+        "period": 2.0,
+        "seed": 4
+      },
+      "blend": "add"
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#8be9fd"
+        ],
+        "style": "key",
+        "duration": 0.6
+      }
+    }
+  ]
+}

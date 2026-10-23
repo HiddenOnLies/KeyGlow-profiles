@@ -1,0 +1,36 @@
+{
+  "format": "keyglow/1",
+  "name": "Gruvbox",
+  "author": "HiddenOnLies · colors from Gruvbox (MIT)",
+  "description": "Warm red, orange and yellow like a campfire; aqua on the keys you press.",
+  "tags": [
+    "theme",
+    "animated",
+    "reactive"
+  ],
+  "layers": [
+    {
+      "effect": "plasma",
+      "params": {
+        "colors": [
+          "#cc241d",
+          "#fe8019",
+          "#fabd2f",
+          "#d65d0e"
+        ],
+        "speed": 0.2,
+        "scale": 1.1
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#8ec07c"
+        ],
+        "style": "key",
+        "duration": 0.8
+      }
+    }
+  ]
+}

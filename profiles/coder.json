@@ -1,0 +1,66 @@
+{
+  "format": "keyglow/1",
+  "name": "Coder",
+  "author": "HiddenOnLies",
+  "description": "Key groups in distinct colors for programming, with a soft flash on each key.",
+  "tags": [
+    "static",
+    "reactive",
+    "productivity"
+  ],
+  "layers": [
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#2a2a50"
+      }
+    },
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#7a5cff"
+      },
+      "keys": [
+        "@modifiers"
+      ]
+    },
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#00a8ff"
+      },
+      "keys": [
+        "@numbers"
+      ]
+    },
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#ff8a00"
+      },
+      "keys": [
+        "@fn_row"
+      ]
+    },
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#00ff9a"
+      },
+      "keys": [
+        "@arrows",
+        "@nav"
+      ]
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ffffff"
+        ],
+        "style": "key",
+        "duration": 0.5
+      }
+    }
+  ]
+}

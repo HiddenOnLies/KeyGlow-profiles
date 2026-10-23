@@ -1,0 +1,42 @@
+{
+  "format": "keyglow/1",
+  "name": "Ember Keys",
+  "author": "HiddenOnLies",
+  "description": "Low flames along the bottom; the keys you press glow like embers.",
+  "tags": [
+    "animated",
+    "reactive"
+  ],
+  "layers": [
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#0c0402"
+      }
+    },
+    {
+      "effect": "fire",
+      "params": {
+        "colors": [
+          "#000000",
+          "#6a0800",
+          "#ff3a00",
+          "#ffa000"
+        ],
+        "speed": 0.8,
+        "height": 0.4
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ff6a00",
+          "#ffb000"
+        ],
+        "style": "key",
+        "duration": 1.6
+      }
+    }
+  ]
+}

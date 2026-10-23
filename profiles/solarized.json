@@ -1,0 +1,31 @@
+{
+  "format": "keyglow/1",
+  "name": "Solarized",
+  "author": "HiddenOnLies · colors from Solarized (MIT)",
+  "description": "All eight Solarized accents rolling across the keyboard.",
+  "tags": [
+    "theme",
+    "animated"
+  ],
+  "layers": [
+    {
+      "effect": "color_wave",
+      "params": {
+        "colors": [
+          "#b58900",
+          "#cb4b16",
+          "#dc322f",
+          "#d33682",
+          "#6c71c4",
+          "#268bd2",
+          "#2aa198",
+          "#859900",
+          "#b58900"
+        ],
+        "speed": 0.06,
+        "angle": 0,
+        "wavelength": 1.2
+      }
+    }
+  ]
+}

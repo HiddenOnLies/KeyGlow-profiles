@@ -1,0 +1,29 @@
+{
+  "format": "keyglow/1",
+  "name": "Lighthouse",
+  "author": "HiddenOnLies",
+  "description": "A warm beam sweeping across a dark night sea.",
+  "tags": [
+    "animated",
+    "chill"
+  ],
+  "layers": [
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#020a1c"
+      }
+    },
+    {
+      "effect": "scanner",
+      "params": {
+        "color": "#fff0b0",
+        "background": "#000000",
+        "speed": 0.18,
+        "width": 0.25,
+        "angle": 0
+      },
+      "blend": "add"
+    }
+  ]
+}

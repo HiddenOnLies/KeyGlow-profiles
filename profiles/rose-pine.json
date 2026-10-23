@@ -1,0 +1,29 @@
+{
+  "format": "keyglow/1",
+  "name": "Rosé Pine",
+  "author": "HiddenOnLies · colors from Rosé Pine (MIT)",
+  "description": "Love, gold, rose, iris and pine drifting very slowly.",
+  "tags": [
+    "theme",
+    "animated",
+    "chill"
+  ],
+  "layers": [
+    {
+      "effect": "color_wave",
+      "params": {
+        "colors": [
+          "#ff3f7f",
+          "#ffaa30",
+          "#ff7a8a",
+          "#a070ff",
+          "#1f8fb0",
+          "#ff3f7f"
+        ],
+        "speed": 0.035,
+        "angle": 20,
+        "wavelength": 2.0
+      }
+    }
+  ]
+}

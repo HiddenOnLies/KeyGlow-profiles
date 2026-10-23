@@ -1,0 +1,41 @@
+{
+  "format": "keyglow/1",
+  "name": "Nord",
+  "author": "HiddenOnLies · colors from Nord (MIT)",
+  "description": "Frost blues and aurora green moving like northern lights.",
+  "tags": [
+    "theme",
+    "animated",
+    "chill"
+  ],
+  "layers": [
+    {
+      "effect": "color_wave",
+      "params": {
+        "colors": [
+          "#2a5cb0",
+          "#3f8ad8",
+          "#30bcd8",
+          "#30d0b0",
+          "#70d060",
+          "#2a5cb0"
+        ],
+        "speed": 0.05,
+        "angle": 10,
+        "wavelength": 1.5
+      }
+    },
+    {
+      "effect": "breathing",
+      "params": {
+        "colors": [
+          "#eceff4"
+        ],
+        "period": 7.0,
+        "min": 0.0
+      },
+      "blend": "add",
+      "opacity": 0.15
+    }
+  ]
+}

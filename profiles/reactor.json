@@ -1,0 +1,58 @@
+{
+  "format": "keyglow/1",
+  "name": "Reactor",
+  "author": "HiddenOnLies",
+  "description": "Green rings pulse out of the core; typing sends out more.",
+  "tags": [
+    "animated",
+    "reactive",
+    "gaming"
+  ],
+  "layers": [
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#001a06"
+      }
+    },
+    {
+      "effect": "ripple",
+      "params": {
+        "center": [
+          0.5,
+          0.6
+        ],
+        "colors": [
+          "#50ff70",
+          "#00a020"
+        ],
+        "speed": 0.5,
+        "thickness": 0.1
+      },
+      "blend": "add"
+    },
+    {
+      "effect": "breathing",
+      "params": {
+        "colors": [
+          "#00ff40"
+        ],
+        "period": 3.0,
+        "min": 0.1
+      },
+      "blend": "add",
+      "opacity": 0.3
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#b0ffb0"
+        ],
+        "style": "ripple",
+        "duration": 0.8,
+        "speed": 1.2
+      }
+    }
+  ]
+}

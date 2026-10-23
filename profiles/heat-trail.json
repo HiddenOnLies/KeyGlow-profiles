@@ -1,0 +1,29 @@
+{
+  "format": "keyglow/1",
+  "name": "Heat Trail",
+  "author": "HiddenOnLies",
+  "description": "Every key you press glows red-hot and cools down slowly.",
+  "tags": [
+    "reactive",
+    "productivity"
+  ],
+  "layers": [
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#050a22"
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ff3000",
+          "#ff7000"
+        ],
+        "style": "key",
+        "duration": 4.0
+      }
+    }
+  ]
+}

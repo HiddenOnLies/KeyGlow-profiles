@@ -1,0 +1,45 @@
+{
+  "format": "keyglow/1",
+  "name": "Catppuccin Mocha",
+  "author": "HiddenOnLies · colors from Catppuccin (MIT)",
+  "description": "Mauve, pink, blue and teal flowing softly; lavender ripples as you type.",
+  "tags": [
+    "theme",
+    "animated",
+    "reactive"
+  ],
+  "layers": [
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#1e1e2e"
+      }
+    },
+    {
+      "effect": "plasma",
+      "params": {
+        "colors": [
+          "#8a4dff",
+          "#1e1e2e",
+          "#ff5ab8",
+          "#161a40",
+          "#3a7dff",
+          "#1e1e2e",
+          "#20c8b0"
+        ],
+        "speed": 0.08,
+        "scale": 0.8
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#b4befe"
+        ],
+        "style": "ripple",
+        "duration": 0.9
+      }
+    }
+  ]
+}

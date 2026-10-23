@@ -1,0 +1,35 @@
+{
+  "format": "keyglow/1",
+  "name": "Glacier",
+  "author": "HiddenOnLies",
+  "description": "Deep blue to ice white, with a slow shine passing over it.",
+  "tags": [
+    "animated",
+    "chill"
+  ],
+  "layers": [
+    {
+      "effect": "gradient",
+      "params": {
+        "colors": [
+          "#8adcff",
+          "#2a7aff",
+          "#06206a"
+        ],
+        "angle": 90
+      }
+    },
+    {
+      "effect": "scanner",
+      "params": {
+        "color": "#ffffff",
+        "background": "#000000",
+        "speed": 0.12,
+        "width": 0.12,
+        "angle": 25
+      },
+      "blend": "add",
+      "opacity": 0.55
+    }
+  ]
+}

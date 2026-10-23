@@ -1,0 +1,53 @@
+{
+  "format": "keyglow/1",
+  "name": "Arena",
+  "author": "HiddenOnLies",
+  "description": "Pulsing WASD, gold ability keys and a shockwave on every press.",
+  "tags": [
+    "animated",
+    "reactive",
+    "gaming"
+  ],
+  "layers": [
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#0a0010"
+      }
+    },
+    {
+      "effect": "breathing",
+      "params": {
+        "colors": [
+          "#ff2050"
+        ],
+        "period": 1.6,
+        "min": 0.35
+      },
+      "keys": [
+        "@wasd"
+      ]
+    },
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#ffb000"
+      },
+      "keys": [
+        "@numbers"
+      ]
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ff2050",
+          "#ffb000"
+        ],
+        "style": "ripple",
+        "duration": 0.7,
+        "speed": 1.4
+      }
+    }
+  ]
+}

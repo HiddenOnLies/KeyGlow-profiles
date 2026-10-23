@@ -1,0 +1,41 @@
+{
+  "format": "keyglow/1",
+  "name": "Amber Terminal",
+  "author": "HiddenOnLies",
+  "description": "An old amber monitor: dim glow, a refresh line and bright keys as you type.",
+  "tags": [
+    "animated",
+    "reactive",
+    "productivity"
+  ],
+  "layers": [
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#3a1800"
+      }
+    },
+    {
+      "effect": "scanner",
+      "params": {
+        "color": "#ff9a00",
+        "background": "#000000",
+        "speed": 0.25,
+        "width": 0.06,
+        "angle": 90
+      },
+      "blend": "add",
+      "opacity": 0.45
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ffb000"
+        ],
+        "style": "key",
+        "duration": 0.9
+      }
+    }
+  ]
+}

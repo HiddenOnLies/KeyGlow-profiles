@@ -1,0 +1,42 @@
+{
+  "format": "keyglow/1",
+  "name": "Coral Reef",
+  "author": "HiddenOnLies",
+  "description": "Coral and turquoise drifting slowly, with rising bubbles of light.",
+  "tags": [
+    "animated",
+    "nature",
+    "chill"
+  ],
+  "layers": [
+    {
+      "effect": "color_wave",
+      "params": {
+        "colors": [
+          "#ff5a4a",
+          "#ff9070",
+          "#00b3a6",
+          "#00708a",
+          "#ff5a4a"
+        ],
+        "speed": 0.06,
+        "angle": 30,
+        "wavelength": 1.6
+      }
+    },
+    {
+      "effect": "starlight",
+      "params": {
+        "colors": [
+          "#ffffff",
+          "#c0f8ff"
+        ],
+        "background": "#000000",
+        "density": 0.05,
+        "period": 2.5,
+        "seed": 3
+      },
+      "blend": "add"
+    }
+  ]
+}
