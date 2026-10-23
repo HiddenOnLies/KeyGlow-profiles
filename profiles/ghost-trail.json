@@ -1,0 +1,28 @@
+{
+  "format": "keyglow/1",
+  "name": "Ghost Trail",
+  "author": "HiddenOnLies",
+  "description": "Keys stay lit for a long while after you press them, then fade away.",
+  "tags": [
+    "reactive",
+    "chill"
+  ],
+  "layers": [
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#04060c"
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#a8c8ff"
+        ],
+        "style": "key",
+        "duration": 7.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "format": "keyglow/1",
+  "name": "Neon Pulse",
+  "author": "HiddenOnLies",
+  "description": "Cyan rows and magenta keys flash over a dim neon gradient.",
+  "tags": [
+    "animated",
+    "reactive",
+    "neon"
+  ],
+  "layers": [
+    {
+      "effect": "color_wave",
+      "params": {
+        "colors": [
+          "#ff00c8",
+          "#00e5ff",
+          "#ff00c8"
+        ],
+        "speed": 0.08,
+        "angle": 0
+      },
+      "opacity": 0.35
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#00e5ff"
+        ],
+        "style": "row",
+        "duration": 0.5
+      },
+      "blend": "add",
+      "opacity": 0.6
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ff00c8"
+        ],
+        "style": "key",
+        "duration": 0.9
+      }
+    }
+  ]
+}

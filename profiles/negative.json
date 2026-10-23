@@ -1,0 +1,32 @@
+{
+  "format": "keyglow/1",
+  "name": "Negative",
+  "author": "HiddenOnLies",
+  "description": "A bright keyboard where the keys you press go dark and slowly light up again.",
+  "tags": [
+    "reactive"
+  ],
+  "layers": [
+    {
+      "effect": "gradient",
+      "params": {
+        "colors": [
+          "#00e5ff",
+          "#b0f8ff",
+          "#00e5ff"
+        ],
+        "angle": 0
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#000000"
+        ],
+        "style": "key",
+        "duration": 1.8
+      }
+    }
+  ]
+}

@@ -36,6 +36,9 @@ Good gallery profiles:
   cover the whole board, not a fixed list of LED numbers.
 - **Look good on real LEDs**: pastel colors turn almost white on a keyboard, and very dark ones
   turn off. Test on your keyboard if you can.
+- **Interactive profiles** use *On key press* layers (`reactive`): the key itself, a ripple
+  from it or its whole row. With several colors, each press takes the next one. Stack them with
+  `add` blending over a calm background.
 - Don't use the `image` effect: it reads a file on your PC, so it can't be shared.
 
 Themes are welcome when the palette's license allows it; add the palette and its license to

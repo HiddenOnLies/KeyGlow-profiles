@@ -1,0 +1,36 @@
+{
+  "format": "keyglow/1",
+  "name": "Equalizer",
+  "author": "HiddenOnLies",
+  "description": "Typing lights whole rows like the bars of a music equalizer.",
+  "tags": [
+    "reactive",
+    "neon"
+  ],
+  "layers": [
+    {
+      "effect": "gradient",
+      "params": {
+        "colors": [
+          "#00e5ff",
+          "#ff00c8"
+        ],
+        "angle": 0
+      },
+      "opacity": 0.25
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#00e5ff",
+          "#7a5cff",
+          "#ff00c8",
+          "#ff7a00"
+        ],
+        "style": "row",
+        "duration": 0.7
+      }
+    }
+  ]
+}

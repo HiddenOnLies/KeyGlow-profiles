@@ -1,4 +1,4 @@
-"""Source for the first gallery profiles. Writes one JSON file per profile into profiles/.
+"""Source for the gallery profiles made by the maintainer. Writes one JSON file per profile into profiles/.
 
 Kept only as a record of how the first batch was made; contributors just add JSON files.
 Run from the repository root: python tools/profiles_src.py
@@ -113,6 +113,74 @@ ORIGINALS = {
     ]),
 }
 
+# Second batch: profiles that react to typing (each press takes the next color in the list)
+INTERACTIVE = {
+    "paint-splash": ("Paint Splash", "Every key you press splashes a different color across the board.",
+                     ["reactive", "neon"], [
+        L("solid", color="#08080c"),
+        L("reactive", colors=["#ff2a6d", "#ffb400", "#05d9e8", "#7cff4f", "#b84dff"], style="ripple",
+          duration=1.4, speed=0.7),
+    ]),
+    "sonar": ("Sonar", "A radar sweep in the dark; each key sends out a ping.",
+              ["animated", "reactive"], [
+        L("solid", color="#001408"),
+        L("scanner", blend="add", opacity=0.6, color="#00ff60", background="#000000", speed=0.2, width=0.08, angle=0),
+        L("reactive", blend="add", colors=["#80ffb0"], style="ripple", duration=1.6, speed=0.5),
+    ]),
+    "equalizer": ("Equalizer", "Typing lights whole rows like the bars of a music equalizer.",
+                  ["reactive", "neon"], [
+        L("gradient", opacity=0.25, colors=["#00e5ff", "#ff00c8"], angle=0),
+        L("reactive", colors=["#00e5ff", "#7a5cff", "#ff00c8", "#ff7a00"], style="row", duration=0.7),
+    ]),
+    "shockwave": ("Shockwave", "A fast white blast from every key over a deep red glow.",
+                  ["reactive", "gaming"], [
+        L("solid", color="#2a0006"),
+        L("reactive", blend="add", colors=["#ffffff"], style="ripple", duration=0.5, speed=2.0),
+        L("reactive", colors=["#ff3040"], style="key", duration=0.4),
+    ]),
+    "typing-rainbow": ("Typing Rainbow", "Each key you press takes the next color of the rainbow.",
+                       ["reactive", "productivity"], [
+        L("solid", color="#0c0c14"),
+        L("reactive", colors=["#ff0040", "#ff8000", "#ffe000", "#40ff40", "#00c0ff", "#4040ff", "#c000ff"],
+          style="key", duration=2.2),
+    ]),
+    "ghost-trail": ("Ghost Trail", "Keys stay lit for a long while after you press them, then fade away.",
+                    ["reactive", "chill"], [
+        L("solid", color="#04060c"),
+        L("reactive", colors=["#a8c8ff"], style="key", duration=7.0),
+    ]),
+    "pond": ("Pond", "Calm dark water; every key drops a stone and its ripples spread.",
+             ["animated", "reactive", "nature", "chill"], [
+        L("plasma", colors=["#021030", "#04305a", "#063f4a", "#020c24"], speed=0.08, scale=1.1),
+        L("reactive", blend="add", colors=["#8fd8ff"], style="ripple", duration=2.0, speed=0.55),
+    ]),
+    "negative": ("Negative", "A bright keyboard where the keys you press go dark and slowly light up again.",
+                 ["reactive"], [
+        L("gradient", colors=["#00e5ff", "#b0f8ff", "#00e5ff"], angle=0),
+        L("reactive", colors=["#000000"], style="key", duration=1.8),
+    ]),
+    "magma-typing": ("Magma Typing", "Lava along the bottom; typing sends white-hot waves through it.",
+                     ["animated", "reactive"], [
+        L("solid", color="#1a0300"),
+        L("fire", colors=["#000000", "#800000", "#ff3000", "#ff9000"], speed=0.6, height=0.5),
+        L("reactive", blend="add", colors=["#ffd080"], style="ripple", duration=0.9, speed=1.1),
+    ]),
+    "neon-pulse": ("Neon Pulse", "Cyan rows and magenta keys flash over a dim neon gradient.",
+                   ["animated", "reactive", "neon"], [
+        L("color_wave", opacity=0.35, colors=["#ff00c8", "#00e5ff", "#ff00c8"], speed=0.08, angle=0),
+        L("reactive", blend="add", opacity=0.6, colors=["#00e5ff"], style="row", duration=0.5),
+        L("reactive", colors=["#ff00c8"], style="key", duration=0.9),
+    ]),
+    "fireworks": ("Fireworks", "A night sky with stars; every key launches a colored burst.",
+                  ["animated", "reactive", "seasonal"], [
+        L("solid", color="#02020e"),
+        sparkle(["#ffffff", "#ffe0a0"], density=0.05, period=2.0, seed=21),
+        L("reactive", blend="add", colors=["#ff3060", "#ffd020", "#40c0ff", "#60ff80", "#e060ff"],
+          style="ripple", duration=1.0, speed=0.9),
+        L("reactive", blend="add", colors=["#ffffff"], style="key", duration=0.3),
+    ]),
+}
+
 # Well-known themes (palettes used under the MIT License, see CREDITS.md), each with its own design
 THEMES = {
     "catppuccin_mocha": ("Catppuccin Mocha", "Catppuccin", "Mauve, pink, blue and teal flowing softly; lavender ripples as you type.",
@@ -172,9 +240,11 @@ def main():
     OUT.mkdir(exist_ok=True)
     for stem, (name, desc, tags, layers) in ORIGINALS.items():
         write(stem, name, ME, desc, tags, layers)
+    for stem, (name, desc, tags, layers) in INTERACTIVE.items():
+        write(stem, name, ME, desc, tags, layers)
     for stem, (name, source, desc, tags, layers) in THEMES.items():
         write(stem, name, f"{ME} · colors from {source} (MIT)", desc, ["theme", *tags], layers)
-    print(f"{len(ORIGINALS) + len(THEMES)} profiles in {OUT}")
+    print(f"{len(ORIGINALS) + len(INTERACTIVE) + len(THEMES)} profiles in {OUT}")
 
 
 if __name__ == "__main__":

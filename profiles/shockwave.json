@@ -1,0 +1,40 @@
+{
+  "format": "keyglow/1",
+  "name": "Shockwave",
+  "author": "HiddenOnLies",
+  "description": "A fast white blast from every key over a deep red glow.",
+  "tags": [
+    "reactive",
+    "gaming"
+  ],
+  "layers": [
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#2a0006"
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ffffff"
+        ],
+        "style": "ripple",
+        "duration": 0.5,
+        "speed": 2.0
+      },
+      "blend": "add"
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ff3040"
+        ],
+        "style": "key",
+        "duration": 0.4
+      }
+    }
+  ]
+}

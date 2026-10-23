@@ -1,0 +1,39 @@
+{
+  "format": "keyglow/1",
+  "name": "Pond",
+  "author": "HiddenOnLies",
+  "description": "Calm dark water; every key drops a stone and its ripples spread.",
+  "tags": [
+    "animated",
+    "reactive",
+    "nature",
+    "chill"
+  ],
+  "layers": [
+    {
+      "effect": "plasma",
+      "params": {
+        "colors": [
+          "#021030",
+          "#04305a",
+          "#063f4a",
+          "#020c24"
+        ],
+        "speed": 0.08,
+        "scale": 1.1
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#8fd8ff"
+        ],
+        "style": "ripple",
+        "duration": 2.0,
+        "speed": 0.55
+      },
+      "blend": "add"
+    }
+  ]
+}

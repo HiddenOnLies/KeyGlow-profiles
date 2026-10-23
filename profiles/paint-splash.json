@@ -1,0 +1,33 @@
+{
+  "format": "keyglow/1",
+  "name": "Paint Splash",
+  "author": "HiddenOnLies",
+  "description": "Every key you press splashes a different color across the board.",
+  "tags": [
+    "reactive",
+    "neon"
+  ],
+  "layers": [
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#08080c"
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ff2a6d",
+          "#ffb400",
+          "#05d9e8",
+          "#7cff4f",
+          "#b84dff"
+        ],
+        "style": "ripple",
+        "duration": 1.4,
+        "speed": 0.7
+      }
+    }
+  ]
+}

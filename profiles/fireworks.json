@@ -1,0 +1,60 @@
+{
+  "format": "keyglow/1",
+  "name": "Fireworks",
+  "author": "HiddenOnLies",
+  "description": "A night sky with stars; every key launches a colored burst.",
+  "tags": [
+    "animated",
+    "reactive",
+    "seasonal"
+  ],
+  "layers": [
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#02020e"
+      }
+    },
+    {
+      "effect": "starlight",
+      "params": {
+        "colors": [
+          "#ffffff",
+          "#ffe0a0"
+        ],
+        "background": "#000000",
+        "density": 0.05,
+        "period": 2.0,
+        "seed": 21
+      },
+      "blend": "add"
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ff3060",
+          "#ffd020",
+          "#40c0ff",
+          "#60ff80",
+          "#e060ff"
+        ],
+        "style": "ripple",
+        "duration": 1.0,
+        "speed": 0.9
+      },
+      "blend": "add"
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ffffff"
+        ],
+        "style": "key",
+        "duration": 0.3
+      },
+      "blend": "add"
+    }
+  ]
+}

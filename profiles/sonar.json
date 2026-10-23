@@ -1,0 +1,42 @@
+{
+  "format": "keyglow/1",
+  "name": "Sonar",
+  "author": "HiddenOnLies",
+  "description": "A radar sweep in the dark; each key sends out a ping.",
+  "tags": [
+    "animated",
+    "reactive"
+  ],
+  "layers": [
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#001408"
+      }
+    },
+    {
+      "effect": "scanner",
+      "params": {
+        "color": "#00ff60",
+        "background": "#000000",
+        "speed": 0.2,
+        "width": 0.08,
+        "angle": 0
+      },
+      "blend": "add",
+      "opacity": 0.6
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#80ffb0"
+        ],
+        "style": "ripple",
+        "duration": 1.6,
+        "speed": 0.5
+      },
+      "blend": "add"
+    }
+  ]
+}

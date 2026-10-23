@@ -1,0 +1,43 @@
+{
+  "format": "keyglow/1",
+  "name": "Magma Typing",
+  "author": "HiddenOnLies",
+  "description": "Lava along the bottom; typing sends white-hot waves through it.",
+  "tags": [
+    "animated",
+    "reactive"
+  ],
+  "layers": [
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#1a0300"
+      }
+    },
+    {
+      "effect": "fire",
+      "params": {
+        "colors": [
+          "#000000",
+          "#800000",
+          "#ff3000",
+          "#ff9000"
+        ],
+        "speed": 0.6,
+        "height": 0.5
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ffd080"
+        ],
+        "style": "ripple",
+        "duration": 0.9,
+        "speed": 1.1
+      },
+      "blend": "add"
+    }
+  ]
+}
