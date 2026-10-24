@@ -1,0 +1,48 @@
+{
+  "format": "keyglow/1",
+  "name": "Crosshair",
+  "author": "HiddenOnLies",
+  "description": "Red WASD; every key you press draws a crosshair through it.",
+  "tags": [
+    "reactive",
+    "gaming"
+  ],
+  "layers": [
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#0a0002"
+      }
+    },
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#ff1030"
+      },
+      "keys": [
+        "@wasd"
+      ]
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ff3040"
+        ],
+        "style": "cross",
+        "duration": 0.45
+      },
+      "blend": "add"
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ffffff"
+        ],
+        "style": "key",
+        "duration": 0.3
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "format": "keyglow/1",
+  "name": "Signal Lost",
+  "author": "HiddenOnLies",
+  "description": "Cyan and magenta glitches; every key lights its row and column.",
+  "tags": [
+    "animated",
+    "reactive",
+    "neon"
+  ],
+  "layers": [
+    {
+      "effect": "glitch",
+      "params": {
+        "colors": [
+          "#00e5ff",
+          "#ff00c8",
+          "#ffffff"
+        ],
+        "background": "#05000a",
+        "density": 0.3,
+        "speed": 0.6
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ffffff"
+        ],
+        "style": "cross",
+        "duration": 0.35
+      },
+      "blend": "add"
+    }
+  ]
+}

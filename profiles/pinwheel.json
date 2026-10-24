@@ -1,0 +1,28 @@
+{
+  "format": "keyglow/1",
+  "name": "Pinwheel",
+  "author": "HiddenOnLies",
+  "description": "The whole rainbow turning around the middle of the keyboard.",
+  "tags": [
+    "animated",
+    "neon"
+  ],
+  "layers": [
+    {
+      "effect": "swirl",
+      "params": {
+        "colors": [
+          "#ff0000",
+          "#ff8000",
+          "#ffff00",
+          "#00ff00",
+          "#00ffff",
+          "#0040ff",
+          "#8000ff",
+          "#ff00c0"
+        ],
+        "speed": 0.2
+      }
+    }
+  ]
+}

@@ -181,6 +181,95 @@ INTERACTIVE = {
     ]),
 }
 
+# Third batch. NEW_EFFECTS need KeyGlow 0.4 (swirl, comet, bounce, glitch, cross/burst key presses);
+# older versions skip them. MORE uses effects every version has.
+NEW_EFFECTS = {
+    "hypnosis": ("Hypnosis", "A black and white spiral that never stops turning.",
+                 ["animated"], [
+        L("swirl", colors=["#ffffff", "#000000"], speed=0.25, twist=1.2),
+    ]),
+    "galaxy-spiral": ("Galaxy Spiral", "Purple and blue spiral arms with stars; keys burst into light.",
+                      ["animated", "reactive"], [
+        L("swirl", colors=["#3a00a0", "#ff2a8a", "#0030c0", "#06001a"], speed=0.05, twist=1.6, center=[0.5, 0.55]),
+        sparkle(["#ffffff"], density=0.05, period=2.5, seed=31),
+        L("reactive", blend="add", colors=["#c0a0ff"], style="burst", duration=0.7, speed=0.6),
+    ]),
+    "pinwheel": ("Pinwheel", "The whole rainbow turning around the middle of the keyboard.",
+                 ["animated", "neon"], [
+        L("swirl", colors=["#ff0000", "#ff8000", "#ffff00", "#00ff00", "#00ffff", "#0040ff", "#8000ff", "#ff00c0"],
+          speed=0.2),
+    ]),
+    "snake": ("Snake", "A green snake slithers across every row; your keys flash as it goes.",
+              ["animated", "reactive", "gaming"], [
+        L("comet", color="#40ff40", background="#001400", speed=0.12, length=0.22),
+        L("reactive", colors=["#ffe000"], style="key", duration=0.5),
+    ]),
+    "shooting-star": ("Shooting Star", "A white comet crossing a starry blue night.",
+                      ["animated", "chill"], [
+        L("gradient", colors=["#000a30", "#06205a"], angle=90),
+        sparkle(["#ffffff", "#a0c0ff"], density=0.05, period=3.0, seed=17),
+        L("comet", blend="add", color="#ffffff", background="#000000", speed=0.08, length=0.28),
+    ]),
+    "pong": ("Pong", "A ball bouncing around a black table; keys burst on contact with your fingers.",
+             ["animated", "reactive", "gaming"], [
+        L("bounce", color="#ffffff", background="#000000", speed=0.35, size=0.08),
+        L("reactive", blend="add", colors=["#00ff80"], style="burst", duration=0.4, speed=0.8),
+    ]),
+    "sunball": ("Sunball", "A big warm sun drifting and bouncing over an orange sky.",
+                ["animated", "chill"], [
+        L("gradient", colors=["#1a0400", "#4a1000"], angle=90),
+        L("bounce", blend="add", color="#ffe060", background="#000000", speed=0.12, size=0.2),
+    ]),
+    "signal-lost": ("Signal Lost", "Cyan and magenta glitches; every key lights its row and column.",
+                    ["animated", "reactive", "neon"], [
+        L("glitch", colors=["#00e5ff", "#ff00c8", "#ffffff"], background="#05000a", density=0.3, speed=0.6),
+        L("reactive", blend="add", colors=["#ffffff"], style="cross", duration=0.35),
+    ]),
+    "cyber-glitch": ("Cyber Glitch", "A neon wave that keeps breaking up.",
+                     ["animated", "neon"], [
+        L("color_wave", colors=["#ff00c8", "#7000ff", "#00e5ff", "#ff00c8"], speed=0.1),
+        L("glitch", blend="add", opacity=0.8, colors=["#ffffff", "#ffe000"], background="#000000",
+          density=0.15, speed=0.8, seed=8),
+    ]),
+    "crosshair": ("Crosshair", "Red WASD; every key you press draws a crosshair through it.",
+                  ["reactive", "gaming"], [
+        L("solid", color="#0a0002"),
+        L("solid", keys=["@wasd"], color="#ff1030"),
+        L("reactive", blend="add", colors=["#ff3040"], style="cross", duration=0.45),
+        L("reactive", colors=["#ffffff"], style="key", duration=0.3),
+    ]),
+    "supernova": ("Supernova", "A starfield where every key explodes into a colored disc.",
+                  ["animated", "reactive"], [
+        L("solid", color="#02020c"),
+        sparkle(["#ffffff", "#ffd0a0"], density=0.06, period=2.0, seed=41),
+        L("reactive", blend="add", colors=["#ff3000", "#ffb000", "#ff00a0", "#40a0ff"], style="burst",
+          duration=0.8, speed=0.9),
+    ]),
+}
+
+MORE = {
+    "candy-rain": ("Candy Rain", "Pink, yellow and mint drops falling on a dark purple background.",
+                   ["animated"], [
+        L("rain", colors=["#ff4fb0", "#ffd000", "#30ffb0"], background="#2a0040", speed=0.5, density=1.0, length=0.5),
+    ]),
+    "thermal-camera": ("Thermal Camera", "Heat-vision colors moving slowly; typing makes the keys hot.",
+                       ["animated", "reactive"], [
+        L("plasma", colors=["#000020", "#3000a0", "#b0007a", "#ff3000", "#ffc000"], speed=0.1, scale=1.2),
+        L("reactive", colors=["#ffffc0", "#ffc000"], style="ripple", duration=0.8, speed=1.0),
+    ]),
+    "deep-focus": ("Deep Focus", "Calm warm white for long work sessions; letters a little brighter.",
+                   ["static", "productivity"], [
+        L("solid", color="#2a1a0a"),
+        L("solid", keys=["@letters"], color="#ffb060"),
+        L("breathing", blend="multiply", colors=["#ffffff"], period=10.0, min=0.7),
+    ]),
+    "metronome": ("Metronome", "A thin white line ticking back and forth over a soft pulse.",
+                  ["animated", "chill"], [
+        L("heartbeat", color="#300818", bpm=60, min=0.4),
+        L("scanner", blend="add", color="#ffffff", background="#000000", speed=0.5, width=0.04),
+    ]),
+}
+
 # Well-known themes (palettes used under the MIT License, see CREDITS.md), each with its own design
 THEMES = {
     "catppuccin_mocha": ("Catppuccin Mocha", "Catppuccin", "Mauve, pink, blue and teal flowing softly; lavender ripples as you type.",
@@ -242,9 +331,11 @@ def main():
         write(stem, name, ME, desc, tags, layers)
     for stem, (name, desc, tags, layers) in INTERACTIVE.items():
         write(stem, name, ME, desc, tags, layers)
+    for stem, (name, desc, tags, layers) in {**NEW_EFFECTS, **MORE}.items():
+        write(stem, name, ME, desc, tags, layers)
     for stem, (name, source, desc, tags, layers) in THEMES.items():
         write(stem, name, f"{ME} · colors from {source} (MIT)", desc, ["theme", *tags], layers)
-    print(f"{len(ORIGINALS) + len(INTERACTIVE) + len(THEMES)} profiles in {OUT}")
+    print(f"{len(ORIGINALS) + len(INTERACTIVE) + len(NEW_EFFECTS) + len(MORE) + len(THEMES)} profiles in {OUT}")
 
 
 if __name__ == "__main__":

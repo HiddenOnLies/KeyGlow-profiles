@@ -1,0 +1,38 @@
+{
+  "format": "keyglow/1",
+  "name": "Deep Focus",
+  "author": "HiddenOnLies",
+  "description": "Calm warm white for long work sessions; letters a little brighter.",
+  "tags": [
+    "static",
+    "productivity"
+  ],
+  "layers": [
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#2a1a0a"
+      }
+    },
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#ffb060"
+      },
+      "keys": [
+        "@letters"
+      ]
+    },
+    {
+      "effect": "breathing",
+      "params": {
+        "colors": [
+          "#ffffff"
+        ],
+        "period": 10.0,
+        "min": 0.7
+      },
+      "blend": "multiply"
+    }
+  ]
+}

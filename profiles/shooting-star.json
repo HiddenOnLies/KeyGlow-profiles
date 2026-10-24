@@ -1,0 +1,46 @@
+{
+  "format": "keyglow/1",
+  "name": "Shooting Star",
+  "author": "HiddenOnLies",
+  "description": "A white comet crossing a starry blue night.",
+  "tags": [
+    "animated",
+    "chill"
+  ],
+  "layers": [
+    {
+      "effect": "gradient",
+      "params": {
+        "colors": [
+          "#000a30",
+          "#06205a"
+        ],
+        "angle": 90
+      }
+    },
+    {
+      "effect": "starlight",
+      "params": {
+        "colors": [
+          "#ffffff",
+          "#a0c0ff"
+        ],
+        "background": "#000000",
+        "density": 0.05,
+        "period": 3.0,
+        "seed": 17
+      },
+      "blend": "add"
+    },
+    {
+      "effect": "comet",
+      "params": {
+        "color": "#ffffff",
+        "background": "#000000",
+        "speed": 0.08,
+        "length": 0.28
+      },
+      "blend": "add"
+    }
+  ]
+}

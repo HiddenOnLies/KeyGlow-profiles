@@ -1,0 +1,32 @@
+{
+  "format": "keyglow/1",
+  "name": "Sunball",
+  "author": "HiddenOnLies",
+  "description": "A big warm sun drifting and bouncing over an orange sky.",
+  "tags": [
+    "animated",
+    "chill"
+  ],
+  "layers": [
+    {
+      "effect": "gradient",
+      "params": {
+        "colors": [
+          "#1a0400",
+          "#4a1000"
+        ],
+        "angle": 90
+      }
+    },
+    {
+      "effect": "bounce",
+      "params": {
+        "color": "#ffe060",
+        "background": "#000000",
+        "speed": 0.12,
+        "size": 0.2
+      },
+      "blend": "add"
+    }
+  ]
+}

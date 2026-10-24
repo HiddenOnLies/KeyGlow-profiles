@@ -1,0 +1,54 @@
+{
+  "format": "keyglow/1",
+  "name": "Galaxy Spiral",
+  "author": "HiddenOnLies",
+  "description": "Purple and blue spiral arms with stars; keys burst into light.",
+  "tags": [
+    "animated",
+    "reactive"
+  ],
+  "layers": [
+    {
+      "effect": "swirl",
+      "params": {
+        "colors": [
+          "#3a00a0",
+          "#ff2a8a",
+          "#0030c0",
+          "#06001a"
+        ],
+        "speed": 0.05,
+        "twist": 1.6,
+        "center": [
+          0.5,
+          0.55
+        ]
+      }
+    },
+    {
+      "effect": "starlight",
+      "params": {
+        "colors": [
+          "#ffffff"
+        ],
+        "background": "#000000",
+        "density": 0.05,
+        "period": 2.5,
+        "seed": 31
+      },
+      "blend": "add"
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#c0a0ff"
+        ],
+        "style": "burst",
+        "duration": 0.7,
+        "speed": 0.6
+      },
+      "blend": "add"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "format": "keyglow/1",
+  "name": "Thermal Camera",
+  "author": "HiddenOnLies",
+  "description": "Heat-vision colors moving slowly; typing makes the keys hot.",
+  "tags": [
+    "animated",
+    "reactive"
+  ],
+  "layers": [
+    {
+      "effect": "plasma",
+      "params": {
+        "colors": [
+          "#000020",
+          "#3000a0",
+          "#b0007a",
+          "#ff3000",
+          "#ffc000"
+        ],
+        "speed": 0.1,
+        "scale": 1.2
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ffffc0",
+          "#ffc000"
+        ],
+        "style": "ripple",
+        "duration": 0.8,
+        "speed": 1.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "format": "keyglow/1",
+  "name": "Snake",
+  "author": "HiddenOnLies",
+  "description": "A green snake slithers across every row; your keys flash as it goes.",
+  "tags": [
+    "animated",
+    "reactive",
+    "gaming"
+  ],
+  "layers": [
+    {
+      "effect": "comet",
+      "params": {
+        "color": "#40ff40",
+        "background": "#001400",
+        "speed": 0.12,
+        "length": 0.22
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ffe000"
+        ],
+        "style": "key",
+        "duration": 0.5
+      }
+    }
+  ]
+}

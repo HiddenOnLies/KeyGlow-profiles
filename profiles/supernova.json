@@ -1,0 +1,47 @@
+{
+  "format": "keyglow/1",
+  "name": "Supernova",
+  "author": "HiddenOnLies",
+  "description": "A starfield where every key explodes into a colored disc.",
+  "tags": [
+    "animated",
+    "reactive"
+  ],
+  "layers": [
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#02020c"
+      }
+    },
+    {
+      "effect": "starlight",
+      "params": {
+        "colors": [
+          "#ffffff",
+          "#ffd0a0"
+        ],
+        "background": "#000000",
+        "density": 0.06,
+        "period": 2.0,
+        "seed": 41
+      },
+      "blend": "add"
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ff3000",
+          "#ffb000",
+          "#ff00a0",
+          "#40a0ff"
+        ],
+        "style": "burst",
+        "duration": 0.8,
+        "speed": 0.9
+      },
+      "blend": "add"
+    }
+  ]
+}

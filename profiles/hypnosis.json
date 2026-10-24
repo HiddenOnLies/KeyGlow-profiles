@@ -1,0 +1,22 @@
+{
+  "format": "keyglow/1",
+  "name": "Hypnosis",
+  "author": "HiddenOnLies",
+  "description": "A black and white spiral that never stops turning.",
+  "tags": [
+    "animated"
+  ],
+  "layers": [
+    {
+      "effect": "swirl",
+      "params": {
+        "colors": [
+          "#ffffff",
+          "#000000"
+        ],
+        "speed": 0.25,
+        "twist": 1.2
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "format": "keyglow/1",
+  "name": "Cyber Glitch",
+  "author": "HiddenOnLies",
+  "description": "A neon wave that keeps breaking up.",
+  "tags": [
+    "animated",
+    "neon"
+  ],
+  "layers": [
+    {
+      "effect": "color_wave",
+      "params": {
+        "colors": [
+          "#ff00c8",
+          "#7000ff",
+          "#00e5ff",
+          "#ff00c8"
+        ],
+        "speed": 0.1
+      }
+    },
+    {
+      "effect": "glitch",
+      "params": {
+        "colors": [
+          "#ffffff",
+          "#ffe000"
+        ],
+        "background": "#000000",
+        "density": 0.15,
+        "speed": 0.8,
+        "seed": 8
+      },
+      "blend": "add",
+      "opacity": 0.8
+    }
+  ]
+}

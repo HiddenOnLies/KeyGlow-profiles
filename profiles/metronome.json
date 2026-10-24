@@ -1,0 +1,30 @@
+{
+  "format": "keyglow/1",
+  "name": "Metronome",
+  "author": "HiddenOnLies",
+  "description": "A thin white line ticking back and forth over a soft pulse.",
+  "tags": [
+    "animated",
+    "chill"
+  ],
+  "layers": [
+    {
+      "effect": "heartbeat",
+      "params": {
+        "color": "#300818",
+        "bpm": 60,
+        "min": 0.4
+      }
+    },
+    {
+      "effect": "scanner",
+      "params": {
+        "color": "#ffffff",
+        "background": "#000000",
+        "speed": 0.5,
+        "width": 0.04
+      },
+      "blend": "add"
+    }
+  ]
+}

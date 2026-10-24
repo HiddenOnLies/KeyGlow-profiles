@@ -1,0 +1,34 @@
+{
+  "format": "keyglow/1",
+  "name": "Pong",
+  "author": "HiddenOnLies",
+  "description": "A ball bouncing around a black table; keys burst on contact with your fingers.",
+  "tags": [
+    "animated",
+    "reactive",
+    "gaming"
+  ],
+  "layers": [
+    {
+      "effect": "bounce",
+      "params": {
+        "color": "#ffffff",
+        "background": "#000000",
+        "speed": 0.35,
+        "size": 0.08
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#00ff80"
+        ],
+        "style": "burst",
+        "duration": 0.4,
+        "speed": 0.8
+      },
+      "blend": "add"
+    }
+  ]
+}

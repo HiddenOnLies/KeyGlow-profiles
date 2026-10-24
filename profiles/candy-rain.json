@@ -1,0 +1,25 @@
+{
+  "format": "keyglow/1",
+  "name": "Candy Rain",
+  "author": "HiddenOnLies",
+  "description": "Pink, yellow and mint drops falling on a dark purple background.",
+  "tags": [
+    "animated"
+  ],
+  "layers": [
+    {
+      "effect": "rain",
+      "params": {
+        "colors": [
+          "#ff4fb0",
+          "#ffd000",
+          "#30ffb0"
+        ],
+        "background": "#2a0040",
+        "speed": 0.5,
+        "density": 1.0,
+        "length": 0.5
+      }
+    }
+  ]
+}
