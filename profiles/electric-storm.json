@@ -1,0 +1,48 @@
+{
+  "format": "keyglow/1",
+  "name": "Electric Storm",
+  "author": "HiddenOnLies",
+  "description": "Bolts of blue-white static over a violet sky; keys crackle when pressed.",
+  "tags": [
+    "animated",
+    "reactive"
+  ],
+  "layers": [
+    {
+      "effect": "gradient",
+      "params": {
+        "colors": [
+          "#1a0040",
+          "#3a0070"
+        ],
+        "angle": 90
+      }
+    },
+    {
+      "effect": "glitch",
+      "params": {
+        "colors": [
+          "#a0c0ff",
+          "#ffffff"
+        ],
+        "background": "#000000",
+        "density": 0.22,
+        "speed": 1.2,
+        "seed": 33
+      },
+      "blend": "add"
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#c0d8ff"
+        ],
+        "style": "ripple",
+        "duration": 0.5,
+        "speed": 1.6
+      },
+      "blend": "add"
+    }
+  ]
+}

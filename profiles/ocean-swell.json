@@ -1,0 +1,39 @@
+{
+  "format": "keyglow/1",
+  "name": "Ocean Swell",
+  "author": "HiddenOnLies",
+  "description": "Blue swells rolling from top to bottom; typing breaks them into foam.",
+  "tags": [
+    "animated",
+    "reactive",
+    "nature"
+  ],
+  "layers": [
+    {
+      "effect": "color_wave",
+      "params": {
+        "colors": [
+          "#001a50",
+          "#0070c0",
+          "#00b0d0",
+          "#001a50"
+        ],
+        "speed": 0.08,
+        "angle": 90,
+        "wavelength": 1.2
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ffffff"
+        ],
+        "style": "burst",
+        "duration": 0.6,
+        "speed": 0.7
+      },
+      "blend": "add"
+    }
+  ]
+}

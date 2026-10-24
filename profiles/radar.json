@@ -1,0 +1,39 @@
+{
+  "format": "keyglow/1",
+  "name": "Radar",
+  "author": "HiddenOnLies",
+  "description": "A single green arm sweeps around the keyboard like a radar screen; keys show up as blips.",
+  "tags": [
+    "animated",
+    "reactive",
+    "gaming"
+  ],
+  "layers": [
+    {
+      "effect": "swirl",
+      "params": {
+        "colors": [
+          "#40ff60",
+          "#002a08",
+          "#000a02",
+          "#000a02",
+          "#000a02",
+          "#00200a"
+        ],
+        "speed": 0.25
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#c0ffc0"
+        ],
+        "style": "burst",
+        "duration": 0.6,
+        "speed": 0.5
+      },
+      "blend": "add"
+    }
+  ]
+}

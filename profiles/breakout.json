@@ -1,0 +1,56 @@
+{
+  "format": "keyglow/1",
+  "name": "Breakout",
+  "author": "HiddenOnLies",
+  "description": "Rainbow bricks along the top and a ball bouncing below them.",
+  "tags": [
+    "animated",
+    "reactive",
+    "gaming"
+  ],
+  "layers": [
+    {
+      "effect": "solid",
+      "params": {
+        "color": "#020208"
+      }
+    },
+    {
+      "effect": "gradient",
+      "params": {
+        "colors": [
+          "#ff2020",
+          "#ff9000",
+          "#ffe000",
+          "#20ff40",
+          "#2080ff",
+          "#a020ff"
+        ]
+      },
+      "keys": [
+        "@fn_row",
+        "@numbers"
+      ]
+    },
+    {
+      "effect": "bounce",
+      "params": {
+        "color": "#ffffff",
+        "background": "#000000",
+        "speed": 0.4,
+        "size": 0.09
+      },
+      "blend": "add"
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ffffff"
+        ],
+        "style": "key",
+        "duration": 0.3
+      }
+    }
+  ]
+}

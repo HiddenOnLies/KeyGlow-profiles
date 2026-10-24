@@ -1,0 +1,25 @@
+{
+  "format": "keyglow/1",
+  "name": "Static TV",
+  "author": "HiddenOnLies",
+  "description": "Grey snow and flickering lines, like a TV with no signal.",
+  "tags": [
+    "animated"
+  ],
+  "layers": [
+    {
+      "effect": "glitch",
+      "params": {
+        "colors": [
+          "#ffffff",
+          "#9a9a9a",
+          "#5a5a5a"
+        ],
+        "background": "#141414",
+        "density": 0.9,
+        "speed": 1.5,
+        "seed": 13
+      }
+    }
+  ]
+}

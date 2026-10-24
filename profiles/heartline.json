@@ -1,0 +1,31 @@
+{
+  "format": "keyglow/1",
+  "name": "Heartline",
+  "author": "HiddenOnLies",
+  "description": "A slow red heartbeat; every key draws a pink cross through it.",
+  "tags": [
+    "animated",
+    "reactive"
+  ],
+  "layers": [
+    {
+      "effect": "heartbeat",
+      "params": {
+        "color": "#ff0030",
+        "bpm": 62,
+        "min": 0.12
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ff80c0"
+        ],
+        "style": "cross",
+        "duration": 0.5
+      },
+      "blend": "add"
+    }
+  ]
+}

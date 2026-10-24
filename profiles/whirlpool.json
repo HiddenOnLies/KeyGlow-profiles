@@ -1,0 +1,38 @@
+{
+  "format": "keyglow/1",
+  "name": "Whirlpool",
+  "author": "HiddenOnLies",
+  "description": "Deep blue water spiraling into the middle; typing throws up foam.",
+  "tags": [
+    "animated",
+    "reactive",
+    "nature"
+  ],
+  "layers": [
+    {
+      "effect": "swirl",
+      "params": {
+        "colors": [
+          "#002a6a",
+          "#00a0d0",
+          "#001a40",
+          "#0060a0"
+        ],
+        "speed": 0.12,
+        "twist": -2.2
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#e0ffff"
+        ],
+        "style": "burst",
+        "duration": 0.5,
+        "speed": 0.6
+      },
+      "blend": "add"
+    }
+  ]
+}

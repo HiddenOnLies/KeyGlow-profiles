@@ -1,0 +1,44 @@
+{
+  "format": "keyglow/1",
+  "name": "Lava Blobs",
+  "author": "HiddenOnLies",
+  "description": "Two warm blobs drifting and bouncing through dark red lava.",
+  "tags": [
+    "animated",
+    "chill"
+  ],
+  "layers": [
+    {
+      "effect": "plasma",
+      "params": {
+        "colors": [
+          "#200200",
+          "#5a0a00",
+          "#300400"
+        ],
+        "speed": 0.08,
+        "scale": 1.0
+      }
+    },
+    {
+      "effect": "bounce",
+      "params": {
+        "color": "#ff6000",
+        "background": "#000000",
+        "speed": 0.09,
+        "size": 0.2
+      },
+      "blend": "add"
+    },
+    {
+      "effect": "bounce",
+      "params": {
+        "color": "#ffb000",
+        "background": "#000000",
+        "speed": 0.06,
+        "size": 0.15
+      },
+      "blend": "add"
+    }
+  ]
+}

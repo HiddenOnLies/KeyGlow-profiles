@@ -1,0 +1,42 @@
+{
+  "format": "keyglow/1",
+  "name": "Disco Ball",
+  "author": "HiddenOnLies",
+  "description": "A turning rainbow with colored sparks flying everywhere.",
+  "tags": [
+    "animated",
+    "neon"
+  ],
+  "layers": [
+    {
+      "effect": "swirl",
+      "params": {
+        "colors": [
+          "#ff0040",
+          "#ffe000",
+          "#00ff80",
+          "#0080ff",
+          "#c000ff"
+        ],
+        "speed": 0.3
+      },
+      "opacity": 0.45
+    },
+    {
+      "effect": "starlight",
+      "params": {
+        "colors": [
+          "#ffffff",
+          "#ff40c0",
+          "#40e0ff",
+          "#ffe040"
+        ],
+        "background": "#000000",
+        "density": 0.3,
+        "period": 0.8,
+        "seed": 51
+      },
+      "blend": "add"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "format": "keyglow/1",
+  "name": "Kaleidoscope",
+  "author": "HiddenOnLies",
+  "description": "A rainbow spiral under flowing color, always changing.",
+  "tags": [
+    "animated",
+    "neon"
+  ],
+  "layers": [
+    {
+      "effect": "swirl",
+      "params": {
+        "colors": [
+          "#ff0080",
+          "#ffb000",
+          "#00e5ff",
+          "#7000ff"
+        ],
+        "speed": 0.18,
+        "twist": 2.0
+      }
+    },
+    {
+      "effect": "plasma",
+      "params": {
+        "colors": [
+          "#000000",
+          "#ff00a0",
+          "#000000",
+          "#00c0ff"
+        ],
+        "speed": 0.2,
+        "scale": 1.2
+      },
+      "blend": "screen",
+      "opacity": 0.5
+    }
+  ]
+}

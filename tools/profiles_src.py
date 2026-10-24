@@ -270,6 +270,81 @@ MORE = {
     ]),
 }
 
+# Fourth batch: more combinations of the KeyGlow 0.4 effects
+BATCH4 = {
+    "radar": ("Radar", "A single green arm sweeps around the keyboard like a radar screen; keys show up as blips.",
+              ["animated", "reactive", "gaming"], [
+        L("swirl", colors=["#40ff60", "#002a08", "#000a02", "#000a02", "#000a02", "#00200a"], speed=0.25),
+        L("reactive", blend="add", colors=["#c0ffc0"], style="burst", duration=0.6, speed=0.5),
+    ]),
+    "whirlpool": ("Whirlpool", "Deep blue water spiraling into the middle; typing throws up foam.",
+                  ["animated", "reactive", "nature"], [
+        L("swirl", colors=["#002a6a", "#00a0d0", "#001a40", "#0060a0"], speed=0.12, twist=-2.2),
+        L("reactive", blend="add", colors=["#e0ffff"], style="burst", duration=0.5, speed=0.6),
+    ]),
+    "twin-comets": ("Twin Comets", "A cyan and a magenta comet chasing each other across the rows.",
+                    ["animated", "neon"], [
+        L("solid", color="#04000c"),
+        L("comet", blend="add", color="#00e5ff", background="#000000", speed=0.1, length=0.2),
+        L("comet", blend="add", color="#ff00c8", background="#000000", speed=0.07, length=0.25),
+    ]),
+    "disco-ball": ("Disco Ball", "A turning rainbow with colored sparks flying everywhere.",
+                   ["animated", "neon"], [
+        L("swirl", opacity=0.45, colors=["#ff0040", "#ffe000", "#00ff80", "#0080ff", "#c000ff"], speed=0.3),
+        L("starlight", blend="add", colors=["#ffffff", "#ff40c0", "#40e0ff", "#ffe040"], background="#000000",
+          density=0.3, period=0.8, seed=51),
+    ]),
+    "breakout": ("Breakout", "Rainbow bricks along the top and a ball bouncing below them.",
+                 ["animated", "reactive", "gaming"], [
+        L("solid", color="#020208"),
+        L("gradient", keys=["@fn_row", "@numbers"], colors=["#ff2020", "#ff9000", "#ffe000", "#20ff40", "#2080ff", "#a020ff"]),
+        L("bounce", blend="add", color="#ffffff", background="#000000", speed=0.4, size=0.09),
+        L("reactive", colors=["#ffffff"], style="key", duration=0.3),
+    ]),
+    "static-tv": ("Static TV", "Grey snow and flickering lines, like a TV with no signal.",
+                  ["animated"], [
+        L("glitch", colors=["#ffffff", "#9a9a9a", "#5a5a5a"], background="#141414", density=0.9, speed=1.5, seed=13),
+    ]),
+    "matrix-glitch": ("Matrix Glitch", "Falling green code that keeps breaking up.",
+                      ["animated", "neon"], [
+        L("rain", colors=["#00ff40", "#a0ffa0"], background="#001a06", speed=0.7, density=1.0, length=0.5),
+        L("glitch", blend="add", opacity=0.7, colors=["#40ff80", "#ffffff"], background="#000000",
+          density=0.12, speed=0.9, seed=27),
+    ]),
+    "heartline": ("Heartline", "A slow red heartbeat; every key draws a pink cross through it.",
+                  ["animated", "reactive"], [
+        L("heartbeat", color="#ff0030", bpm=62, min=0.12),
+        L("reactive", blend="add", colors=["#ff80c0"], style="cross", duration=0.5),
+    ]),
+    "lava-blobs": ("Lava Blobs", "Two warm blobs drifting and bouncing through dark red lava.",
+                   ["animated", "chill"], [
+        L("plasma", colors=["#200200", "#5a0a00", "#300400"], speed=0.08, scale=1.0),
+        L("bounce", blend="add", color="#ff6000", background="#000000", speed=0.09, size=0.2),
+        L("bounce", blend="add", color="#ffb000", background="#000000", speed=0.06, size=0.15),
+    ]),
+    "kaleidoscope": ("Kaleidoscope", "A rainbow spiral under flowing color, always changing.",
+                     ["animated", "neon"], [
+        L("swirl", colors=["#ff0080", "#ffb000", "#00e5ff", "#7000ff"], speed=0.18, twist=2.0),
+        L("plasma", blend="screen", opacity=0.5, colors=["#000000", "#ff00a0", "#000000", "#00c0ff"], speed=0.2, scale=1.2),
+    ]),
+    "electric-storm": ("Electric Storm", "Bolts of blue-white static over a violet sky; keys crackle when pressed.",
+                       ["animated", "reactive"], [
+        L("gradient", colors=["#1a0040", "#3a0070"], angle=90),
+        L("glitch", blend="add", colors=["#a0c0ff", "#ffffff"], background="#000000", density=0.22, speed=1.2, seed=33),
+        L("reactive", blend="add", colors=["#c0d8ff"], style="ripple", duration=0.5, speed=1.6),
+    ]),
+    "zen-garden": ("Zen Garden", "Soft sand-colored rings spreading slowly; each key adds a ripple.",
+                   ["animated", "reactive", "chill"], [
+        L("ripple", colors=["#d0a060", "#806030"], background="#140c04", speed=0.08, thickness=0.18),
+        L("reactive", blend="add", colors=["#ffe0b0"], style="ripple", duration=2.0, speed=0.4),
+    ]),
+    "ocean-swell": ("Ocean Swell", "Blue swells rolling from top to bottom; typing breaks them into foam.",
+                    ["animated", "reactive", "nature"], [
+        L("color_wave", colors=["#001a50", "#0070c0", "#00b0d0", "#001a50"], speed=0.08, angle=90, wavelength=1.2),
+        L("reactive", blend="add", colors=["#ffffff"], style="burst", duration=0.6, speed=0.7),
+    ]),
+}
+
 # Well-known themes (palettes used under the MIT License, see CREDITS.md), each with its own design
 THEMES = {
     "catppuccin_mocha": ("Catppuccin Mocha", "Catppuccin", "Mauve, pink, blue and teal flowing softly; lavender ripples as you type.",
@@ -333,9 +408,11 @@ def main():
         write(stem, name, ME, desc, tags, layers)
     for stem, (name, desc, tags, layers) in {**NEW_EFFECTS, **MORE}.items():
         write(stem, name, ME, desc, tags, layers)
+    for stem, (name, desc, tags, layers) in BATCH4.items():
+        write(stem, name, ME, desc, tags, layers)
     for stem, (name, source, desc, tags, layers) in THEMES.items():
         write(stem, name, f"{ME} · colors from {source} (MIT)", desc, ["theme", *tags], layers)
-    print(f"{len(ORIGINALS) + len(INTERACTIVE) + len(NEW_EFFECTS) + len(MORE) + len(THEMES)} profiles in {OUT}")
+    print(f"{len(ORIGINALS) + len(INTERACTIVE) + len(NEW_EFFECTS) + len(MORE) + len(BATCH4) + len(THEMES)} profiles in {OUT}")
 
 
 if __name__ == "__main__":

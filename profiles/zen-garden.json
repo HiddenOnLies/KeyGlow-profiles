@@ -1,0 +1,37 @@
+{
+  "format": "keyglow/1",
+  "name": "Zen Garden",
+  "author": "HiddenOnLies",
+  "description": "Soft sand-colored rings spreading slowly; each key adds a ripple.",
+  "tags": [
+    "animated",
+    "reactive",
+    "chill"
+  ],
+  "layers": [
+    {
+      "effect": "ripple",
+      "params": {
+        "colors": [
+          "#d0a060",
+          "#806030"
+        ],
+        "background": "#140c04",
+        "speed": 0.08,
+        "thickness": 0.18
+      }
+    },
+    {
+      "effect": "reactive",
+      "params": {
+        "colors": [
+          "#ffe0b0"
+        ],
+        "style": "ripple",
+        "duration": 2.0,
+        "speed": 0.4
+      },
+      "blend": "add"
+    }
+  ]
+}
