@@ -19,10 +19,19 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install git+https://github.com/HiddenOnLies/KeyGlow
-      - run: keyglow gallery profiles --bundle gallery.json
-      - name: Commit gallery.json if it changed
+      - run: keyglow gallery profiles --bundle /tmp/gallery.json
+      - name: Commit gallery.json if the profiles changed
         run: |
-          if git diff --quiet -- gallery.json; then echo "gallery.json is up to date"; exit 0; fi
+          # gallery.json also carries the date it was built; only a change in the profiles counts
+          python - <<'PY'
+          import json, shutil, sys
+          built = json.load(open("/tmp/gallery.json"))
+          committed = json.load(open("gallery.json"))
+          if built["profiles"] == committed["profiles"]:
+              print("gallery.json is up to date"); sys.exit(0)
+          shutil.copy("/tmp/gallery.json", "gallery.json")
+          PY
+          if git diff --quiet -- gallery.json; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add gallery.json
