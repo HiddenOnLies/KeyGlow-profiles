@@ -15,19 +15,27 @@ community. They show up in the app under *Profiles → Community*.
 
 ## Adding your profile
 
-1. Make it in KeyGlow and save it. Your profiles are `.json` files in
-   `Documents\KeyGlow\Perfiles`.
+**From KeyGlow** (easiest): open your profile, then *⋯ → Share to community gallery…*. Fill in
+your name, a one-sentence description and some tags, and press *Open GitHub*: GitHub opens with
+the file ready. Press *Propose changes* and *Create pull request* (you need a free GitHub account;
+GitHub makes a copy of the gallery for you).
+
+**By hand:**
+
+1. Your profiles are `.json` files in `Documents\KeyGlow\Perfiles`.
 2. Fill in `author` (your name or GitHub user), a one-sentence `description` and a few `tags`:
    `animated`, `static`, `reactive` (reacts to typing), `gaming`, `chill`, `nature`, `neon`,
    `productivity`, `seasonal`, `theme`.
-3. Put it in [`profiles/`](profiles) with a short lowercase file name (`my-profile.json`).
-4. Check it and rebuild the bundle (needs KeyGlow from source: `pip install git+https://github.com/HiddenOnLies/KeyGlow`):
+3. Add it to [`profiles/`](profiles) with a short lowercase file name (`my-profile.json`) and open
+   a pull request.
 
-   ```bash
-   keyglow gallery profiles --bundle gallery.json
-   ```
+The automatic check validates the profile, and once it's accepted [`gallery.json`](gallery.json)
+is rebuilt by itself. To check it on your PC first (needs KeyGlow from source:
+`pip install git+https://github.com/HiddenOnLies/KeyGlow`):
 
-5. Open a pull request. The automatic check runs the same validation.
+```bash
+keyglow gallery profiles
+```
 
 Good gallery profiles:
 

@@ -15,13 +15,3 @@ jobs:
       - run: pip install git+https://github.com/HiddenOnLies/KeyGlow
       - name: Validate every profile
         run: keyglow gallery profiles --bundle /tmp/gallery.json
-      - name: gallery.json is up to date
-        run: |
-          python - <<'PY'
-          import json, sys
-          built = json.load(open("/tmp/gallery.json"))["profiles"]
-          committed = json.load(open("gallery.json"))["profiles"]
-          if built != committed:
-              sys.exit("gallery.json is out of date: run `keyglow gallery profiles --bundle gallery.json`")
-          print(f"{len(built)} profiles, bundle up to date")
-          PY
